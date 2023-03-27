@@ -1,0 +1,161 @@
+body {
+    background-color: #111927;
+    color: rgb(255, 255, 255)
+}
+
+h1 {
+    font-size: 4vh;
+    text-align: center;
+    margin-bottom: 4.5vw;
+    margin-top: 0;
+}
+
+.all {
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+/******NAV*****/
+.all nav {
+    height: 30vh;
+    padding: 4vw;
+    border: 0.3vh solid #ffffff;
+    background-color: #9fef0091;
+    border-radius: 0.5vw;
+}
+
+nav div {
+    margin-bottom: 5vh;
+    margin-right: 5vh;
+}
+
+.playerTwo {
+    display: flex;
+    flex-direction: row;
+}
+
+.playerOne {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    margin: 0;
+    margin-left: 2vh;
+
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div .win {
+    margin-top: 3vw;
+    font: 700;
+    font-size: 3vh;
+    color: #aaff00;
+}
+div .draw{
+    margin-top: 3vw;
+    font: 700;
+    font-size: 3vh;
+    color: #aaff00;
+}
+
+/*****BUTTON*****/
+div .play {
+    margin-bottom: 4vh;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.button {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #ffffff;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button:active {
+  background: var(--color);
+  color: #000000;
+}
+
+/******Start Block of morpion******/
+
+/*****TOP*****/
+#row_top {
+    display: flex;
+    justify-content: center;
+}
+
+#row_top div {
+    width: 10vw;
+    height: 10vw;
+    padding: 4vh;
+}
+
+/*****MID*****/
+#row_mid {
+    display: flex;
+    justify-content: center;
+}
+
+#row_mid div {
+    width: 10vw;
+    height: 10vw;
+    padding: 4vh;
+}
+
+/*****BOT*****/
+#row_bot {
+    display: flex;
+    justify-content: center;
+}
+
+#row_bot div {
+    width: 10vw;
+    height: 10vw;
+    padding: 4vh;
+}
+
+/*****BORDER BLOCK****/
+.border-right {
+    border-right: 0.5vh solid white;
+}
+
+.border-bottom {
+    border-bottom: 0.5vh solid white;
+}
+
+.border-left {
+    border-left: 0.5vh solid white;
+}
