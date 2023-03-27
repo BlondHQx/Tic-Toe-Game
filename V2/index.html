@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Tic Toe Game</title>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h1>Tic Toe Game :</h1>
+        </div>
+        <!--Start morpion-->
+        <div class="all">
+            <!--NAV BAR FOR FUNCTIONNALITIES-->
+            <div class="left">
+            <nav>
+                <div class="play btn">
+                    <button id="playBtn" class="button" role="button" onclick="playBtn(this)">Play</button>
+                </div>
+                <div class="playerOne">
+                    Player 1 
+                    <p id="player_one"></p>
+                </div>
+                <div class="playerTwo">
+                    Player 2 
+                    <p id="player_two"></p>
+                </div>
+                <div class="reset btn">
+                    <button id="resetBtn" class="button" role="button" onclick="reset(this)">Reset</button>
+                </div>
+            </nav>
+
+            <div id="status">
+                <p class="win"></p>
+                <p class="draw"></p>
+            </div>
+        </div>
+
+            <!--BLOCK FOR MORPION-->
+            <div class="block">
+            <div id="row_top">
+                <div onclick="play(this)" class="border-right border-bottom cell"></div>
+                <div onclick="play(this)" class="border-bottom cell"></div>
+                <div onclick="play(this)" class="border-bottom border-left cell"></div>
+            </div>
+            <div id="row_mid">
+                <div onclick="play(this)" class="border-right border-bottom cell"></div>
+                <div onclick="play(this)" class="border-bottom cell"></div>
+                <div onclick="play(this)" class="border-bottom border-left cell"></div>
+            </div>
+            <div id="row_bot">
+                <div onclick="play(this)" class="border-right cell"></div>
+                <div onclick="play(this)" class="bot-third cell"></div>
+                <div onclick="play(this)" class="bot-third border-left cell"></div>
+            </div>
+        </div>
+        </div>
+
+      
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+
+</html>
