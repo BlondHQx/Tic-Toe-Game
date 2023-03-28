@@ -29,8 +29,7 @@ function getNames() {
     document.querySelector("#player_two").innerHTML = namePtwo;
     document.querySelector("#player_one").innerHTML = namePone;
     if (gameCpuMode == null || document.querySelector("#userOne").value == "" || document.querySelector("#userTwo").value == "" ) {
-        document.querySelector('.error').innerHTML = 'ERROR'
-        // afficher message erreur 
+        document.querySelector('.error').innerHTML = 'ERROR ! (Enter a valid name(s) Player(s))'
     } else {
         window.location.href = "#";
     }

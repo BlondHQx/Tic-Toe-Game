@@ -4,6 +4,7 @@
 
 .title_top{
     font-size: 5vh;
+    color: #51ff00;
 }
 
 .wrapper {
@@ -115,6 +116,13 @@
     width: 480px;
     font-weight: 700;
     cursor:pointer;
+}
+
+.error{
+    padding: 0;
+    margin-top: 40px;
+    font-size: 2vw;
+    color: #51ff00;
 }
 
 .modal__close {
