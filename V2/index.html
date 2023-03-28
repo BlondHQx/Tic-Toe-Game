@@ -6,11 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/startingPage.css">
     <title>Tic Toe Game</title>
 </head>
 
 <body>
     <main>
+       
+<!----------STARTIN PAGE--------->
+        <div id="demo-modal" class="modal">
+            <h2 class="title_top">|! Tic Toe Games !|</h2>
+            <div class="modal__content">
+                <h2 class="title">Select Mode :</h2>
+                <div class="btn">
+                    <p><button id="solo" class="button" role="button" onclick="setMode(true)">Solo Game</button></p>
+                    <p><button id="duo" class="button" role="button" onclick="setMode(false)">Duo Game</button></p>
+                </div>
+                <form action="#">
+                    <h2 class="select">Select name(s) for user(s) :</h2>
+                    <section class="userOne">
+                        <h2 class="modal_case">User 1 :</h2>
+                        <article><input class="case" id="userOne" type="text" name="text" on></article>
+                    </section>
+
+                    <section class="userTwo">
+                        <h2 class="modal_case">User 2 :</h2>
+                        <p class="userTwo_txt">(Autofill if Solo Game)</p>
+                        <article><input class="case" id="userTwo" type="text" name="text"></article>
+                    </section>
+
+                    <div>
+                        <input class="continue" type="button" onclick="getNames()" value="CONTINUE">
+                    </div>
+                    <a href="#" class="modal__close" onclick="close()">&times;</a>
+                </form>
+
+                <div>
+                    <h1 class="error"></h1>
+                </div>
+            </div>
+        </div>
         <div>
             <h1>Tic Toe Game :</h1>
         </div>
@@ -18,55 +53,55 @@
         <div class="all">
             <!--NAV BAR FOR FUNCTIONNALITIES-->
             <div class="left">
-            <nav>
-                <div class="play btn">
-                    <button id="playBtn" class="button" role="button" onclick="playBtn(this)">Play</button>
-                </div>
-                <div class="playerOne">
-                    Player 1 
-                    <p id="player_one"></p>
-                </div>
-                <div class="playerTwo">
-                    Player 2 
-                    <p id="player_two"></p>
-                </div>
-                <div class="reset btn">
-                    <button id="resetBtn" class="button" role="button" onclick="reset(this)">Reset</button>
-                </div>
-            </nav>
+                <nav>
+                    <div class="play btn">
+                        <button id="playBtn" class="button" role="button" onclick="playBtn(this)">Play</button>
+                    </div>
+                    <div id="playerOne" class="playerOne underline">
+                        Player 1
+                        <p id="player_one"></p>
+                    </div>
+                    <div id="playerTwo" class="playerTwo">
+                        Player 2
+                        <p id="player_two"></p>
+                    </div>
+                    <div class="reset btn">
+                        <button id="resetBtn" class="button" role="button" onclick="reset(this)">Reset</button>
+                    </div>
+                </nav>
 
-            <div id="status">
-                <p class="win"></p>
-                <p class="draw"></p>
+                <div id="status">
+                    <p class="win"></p>
+                    <p class="draw"></p>
+                </div>
             </div>
-        </div>
 
             <!--BLOCK FOR MORPION-->
             <div class="block">
-            <div id="row_top">
-                <div onclick="play(this)" class="border-right border-bottom cell"></div>
-                <div onclick="play(this)" class="border-bottom cell"></div>
-                <div onclick="play(this)" class="border-bottom border-left cell"></div>
+                <div id="row_top">
+                    <div onclick="play(this)" class="border-right border-bottom cell"></div>
+                    <div onclick="play(this)" class="border-bottom cell"></div>
+                    <div onclick="play(this)" class="border-bottom border-left cell"></div>
+                </div>
+                <div id="row_mid">
+                    <div onclick="play(this)" class="border-right border-bottom cell"></div>
+                    <div onclick="play(this)" class="border-bottom cell"></div>
+                    <div onclick="play(this)" class="border-bottom border-left cell"></div>
+                </div>
+                <div id="row_bot">
+                    <div onclick="play(this)" class="border-right cell"></div>
+                    <div onclick="play(this)" class="bot-third cell"></div>
+                    <div onclick="play(this)" class="bot-third border-left cell"></div>
+                </div>
             </div>
-            <div id="row_mid">
-                <div onclick="play(this)" class="border-right border-bottom cell"></div>
-                <div onclick="play(this)" class="border-bottom cell"></div>
-                <div onclick="play(this)" class="border-bottom border-left cell"></div>
-            </div>
-            <div id="row_bot">
-                <div onclick="play(this)" class="border-right cell"></div>
-                <div onclick="play(this)" class="bot-third cell"></div>
-                <div onclick="play(this)" class="bot-third border-left cell"></div>
-            </div>
-        </div>
         </div>
 
-      
+
 
     </main>
-
+    <script src="./assets/js/starting.js"></script>
     <script src="./assets/js/script.js"></script>
-    
+
 </body>
 
 </html>

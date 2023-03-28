@@ -1,0 +1,126 @@
+#demo-modal {
+    flex-direction: column;
+}
+
+.title_top{
+    font-size: 5vh;
+}
+
+.wrapper {
+    height: 100vh;
+    /* This part is important for centering the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* End center */
+}
+
+.wrapper a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    background-color: #111927;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #585858;
+    font-family: neue-haas-unica, sans-serif;
+    font-style: bold;
+}
+
+.modal {
+    visibility: hidden;
+  opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.9);
+    transition: all .4s;
+}
+
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.modal__content {
+    border-radius: 4px;
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    background: #111927;
+    padding: 1em 2em;
+}
+
+.select{
+    text-align: center;
+    margin-top: 4vh;
+    text-decoration: underline 0.3vh #585858;
+}
+
+.modal__content .userOne {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.modal__content .case {
+    color: white;
+    box-sizing: inherit;
+    background: black;
+    border: 9px;
+    border-radius: 9px;
+    padding: 8px;
+    width: 480px;
+    height: 20px;
+    letter-spacing: 2;
+    font-size: 20px;
+}
+
+.modal__content .userTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.modal_case{
+    margin-bottom: 0;
+}
+
+.userTwo_txt{
+    margin: 0;
+}
+
+.continue {
+    color: #51ff00;
+    box-sizing: inherit;
+    background: #212a39;
+    border: white;
+    border-radius: 9px;
+    padding: 8px;
+    width: 480px;
+    font-weight: 700;
+    cursor:pointer;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #51ff00;
+    text-decoration: none;
+}
